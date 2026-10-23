@@ -9,7 +9,7 @@ RUN yarn build
 
 FROM scratch AS export
 WORKDIR /
-COPY --from=build /src/build ./build
+COPY --from=build /src/dist ./build
 COPY --from=build /src/assets ./assets
 
 
